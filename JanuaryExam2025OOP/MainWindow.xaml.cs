@@ -23,8 +23,10 @@ namespace JanuaryExam2025OOP
     /// </summary>
     public partial class MainWindow : Window
     {
-        // Creates a list for all events
+        // Creates a list for all events, Ticket Types, VIP Types
         private List<Event> Events;
+        private List<Ticket> Tickets;
+        private List<VIPTicket> VIPTicket;
 
 
         public MainWindow()
@@ -34,12 +36,19 @@ namespace JanuaryExam2025OOP
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Events = GetData();
+            Events = GetEventData();
+            Tickets = GetEventTicket();
+            VIPTicket = GetVIPTicket();
         }
 
 
+        /// <summary>
+        /// Methods for Creating Event Lists, Ticket lists, VIP lists
+        /// </summary>
+        /// <returns></returns>
+
         //Create a list of Event Objects.
-        private List<Event> GetData()
+        private List<Event> GetEventData()
         {
 
             // Creating 2 event objects
@@ -48,9 +57,38 @@ namespace JanuaryExam2025OOP
 
             Ticket EarlyBird = new Ticket() { Name = "Early Bird", Price = 100m, AvailableTickets = 100 };
             Ticket Platinium = new Ticket() { Name = "Platinium", Price = 150m, AvailableTickets = 100 };
-        
 
-            return new List<Event>() { Oasis, ElectricPicnic};
+            VIPTicket TicketAndHotelPackage = new VIPTicket() { Price = 150m, AdditionalCost = 100m, AdditionalExtras = "4* Hotel", AvailableTickets = 100 };
+            VIPTicket WeekendTicket = new VIPTicket() { Price = 200m, AdditionalCost = 100m, AdditionalExtras = "With Camping", AvailableTickets = 100 };
+
+
+            return new List<Event>() { Oasis, ElectricPicnic };
+        }
+
+
+        // Returns List of Tickets
+        private List<Ticket> GetEventTicket()
+        {
+
+
+
+            Ticket EarlyBird = new Ticket() { Name = "Early Bird", Price = 100m, AvailableTickets = 100 };
+            Ticket Platinium = new Ticket() { Name = "Platinium", Price = 150m, AvailableTickets = 100 };
+
+            return new List<Ticket>() { EarlyBird, Platinium };
+        }
+
+
+        // Returns list of vip tickets
+        private List<VIPTicket> GetVIPTicket()
+        {
+            // Creating VIP Ticket Objects
+
+            VIPTicket TicketAndHotelPackage = new VIPTicket() { Price = 150m, AdditionalCost = 100m, AdditionalExtras = "4* Hotel", AvailableTickets = 100 };
+            VIPTicket WeekendTicket = new VIPTicket() { Price = 200m, AdditionalCost = 100m, AdditionalExtras = "With Camping", AvailableTickets = 100 };
+
+
+            return new List<VIPTicket>() { TicketAndHotelPackage, WeekendTicket };
         }
 
 
