@@ -95,11 +95,17 @@ namespace JanuaryExam2025OOP
             return new List<VIPTicket>() { TicketAndHotelPackage, WeekendTicket };
         }
 
+        private void lbxEvents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // If a user is has selected clicked on an event. It needs to update the appropriate tickets to the right
+            lbxTickets.ItemsSource = Tickets;
+     
+        }
 
-        // Updating Listboxes
 
 
-        
+
+
 
 
     }
