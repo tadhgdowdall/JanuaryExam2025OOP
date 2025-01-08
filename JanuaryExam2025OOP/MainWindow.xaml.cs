@@ -1,4 +1,10 @@
-﻿/*https://github.com/tadhgdowdall/JanuaryExam2025OOP */
+﻿/*
+Student Name = Tadhg Dowdall
+Student Number = S00250843
+Date = 08/01/2025
+
+
+https://github.com/tadhgdowdall/JanuaryExam2025OOP */
 
 
 using System;
@@ -120,7 +126,7 @@ namespace JanuaryExam2025OOP
             string searchTerm = tbxSearch.Text;
 
 
-            // If the search box is empty display all
+            // If the search box is empty display all events
             if (string.IsNullOrEmpty(searchTerm)){
                 Events = GetEventData();
                 lbxEvents.ItemsSource = Events;
