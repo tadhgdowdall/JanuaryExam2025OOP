@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JanuaryExam2025OOP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
         <Label Content="Events" HorizontalAlignment="Left" Margin="46,100,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="lbxEvents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="46,139,462,100"/>

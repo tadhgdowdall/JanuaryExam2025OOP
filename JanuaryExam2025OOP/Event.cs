@@ -21,7 +21,7 @@ namespace JanuaryExam2025OOP
         #endregion
 
         #region Constructors
-        public Event() { }
+       
 
         public Event(string name, DateTime eventDate, List<Ticket> tickets, EventType typeOfEvent)
         {
@@ -30,6 +30,9 @@ namespace JanuaryExam2025OOP
             Tickets = tickets;
             TypeOfEvent = typeOfEvent;
         }
+        public Event() { }
+
+
         #endregion
 
         #region Methods
