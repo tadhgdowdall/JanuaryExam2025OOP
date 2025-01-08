@@ -102,11 +102,32 @@ namespace JanuaryExam2025OOP
      
         }
 
+        private void btnBook_Click(object sender, RoutedEventArgs e)
+        {
+            string ticketAmount = tblkNumberOfTickets.Text;
+
+            if (string.IsNullOrWhiteSpace(ticketAmount))
+            {
+                MessageBox.Show("Ticket Amount is required ");
+                return;
+            }
+        }
 
 
+        private void tbxSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            //read what is in box
+            string searchTerm = tbxSearch.Text;
 
 
+            // If the search box is empty display all
+            if (string.IsNullOrEmpty(searchTerm)){
+                Events = GetEventData();
+                lbxEvents.ItemsSource = Events;
+            }
 
+                
 
+        }
     }
 }
