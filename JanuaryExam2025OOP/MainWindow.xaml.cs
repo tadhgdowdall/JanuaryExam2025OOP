@@ -39,6 +39,10 @@ namespace JanuaryExam2025OOP
             Events = GetEventData();
             Tickets = GetEventTicket();
             VIPTicket = GetVIPTicket();
+
+
+            lbxEvents.ItemsSource = Events;
+
         }
 
 
@@ -91,6 +95,11 @@ namespace JanuaryExam2025OOP
             return new List<VIPTicket>() { TicketAndHotelPackage, WeekendTicket };
         }
 
+
+        // Updating Listboxes
+
+
+        
 
 
     }
