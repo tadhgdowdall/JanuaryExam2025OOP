@@ -9,7 +9,7 @@ namespace JanuaryExam2025OOP
     // Event type with set values 
     public enum EventType { Music, Comedy, Theatre}
 
-    internal class Event
+    internal class Event : IComparable<Event>
     {
 
         #region Properties
@@ -31,6 +31,16 @@ namespace JanuaryExam2025OOP
             TypeOfEvent = typeOfEvent;
         }
         #endregion
+
+        #region Methods
+        //Methods 
+        //Used to sort a list of event items but by EventDate
+        public int CompareTo(Event other)
+        {
+            return this.EventDate.Day.CompareTo(other.EventDate.Day);
+        }
+        #endregion
+
 
     }
 }
